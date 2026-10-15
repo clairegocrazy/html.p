@@ -1,41 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Angela's Cinnamon Roll Recipe</h1>
-    <h2>Ingredients</h2>
-    <h3>For the dough:</h3>
-    <ul>
-        <li> ¾ cup warm milk</li>
-        <li>2 ¼ teaspoons yeast</li>
-        <li>¼ cup granulated sugar</li>
-        <li>1 egg plus 1 egg yolk</li>
-        <li>¼ cup butter</li>
-        <li>3 cups bread flour</li>
-    </ul>
+  <header class="site-header">
+    <h1>My Learning Space</h1>
+    <nav class="top-nav" aria-label="主要導覽">
+      <a href="#home">首頁</a>
+      <a href="#courses">課程</a>
+      <a href="#settings">設定</a>
+    </nav>
+  </header>
+
+  <div class="dashboard" id="home">
+    <aside class="sidebar" aria-label="學習選單">
+      <h2>學習選單</h2>
+      <nav class="side-nav" aria-label="學習功能">
+        <a href="#courses">我的課程</a>
+        <a href="#progress">學習進度</a>
+        <a href="#tasks">待辦事項</a>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="courses">
+      <section class="overview" id="progress">
+        <h2>本週學習概況</h2>
+        <div class="stats">
+          <article class="stat-card">
+            <h3>4</h3>
+            <p>修課數</p>
+          </article>
+          <article class="stat-card">
+            <h3>2</h3>
+            <p>待完成</p>
+          </article>
+          <article class="stat-card">
+            <h3>85%</h3>
+            <p>學習進度</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tasks-section" id="tasks">
+        <h2>近期學習任務</h2>
+        <div class="task-list">
+          <div class="task">
+            <span>完成 CSS 練習</span>
+            <span class="task-status">待完成</span>
+          </div>
+          <div class="task">
+            <span>觀看 Vue 課前影片</span>
+            <span class="task-status">進行中</span>
+          </div>
+          <div class="task">
+            <span>準備程式設計測驗</span>
+            <span class="task-status">待完成</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="settings">
+    <p>Student Dashboard｜My Learning Space</p>
+  </footer>
 </body>
 </html>
-<h3>For the filling:</h3>
-<ul>
-    <li>2/3 cup dark brown sugar</li> 
-    <li>1 ½ tablespoons ground cinnamon</li>
-    <li>¼ cup butter</li>
-</ul>
-
-<h2>Instructions</h2>
-<ol>
-<li>Mix the milk with the yeast, sugar, eggs.</li>
-<li>Melt the butter and add to the mixture.</li>
-<li>Add in the flour and mix until combined into a dough.</li>
-<li>Knead the dough for 10 minuites.</li> 
-<li>Transfer the dough into a large bowl and cover with plastic wrap. Leave it somewhere to rise for 2 hours.</li>
-<li>After the dough has doubled in size, roll it out into a large rectangle. 
-Melt the butter for the filling and mix in the sugar and cinnamon.
-Spread the filling onto the dough then roll the dough into a swiss roll. 
-Cut the roll into 3cm sections and place flat into a baking tray.
-Pre-heat the oven to 350F or 180C, then bake the rolls for 20-25min until lightly brown.</li>
-</ol> 
