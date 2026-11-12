@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q1</title>
+    <title>Q2</title>
 </head>
 <body>
-    <img src="1.jpg" alt="一本書的圖片"><br>
-    <img id="pic" src="1.jpg" alt="一本書的圖片"><br>
-    <img src="1.jpg" alt="一本書的圖片"><br>
-    <button onclick="disappear()">消失</button>
-    <button onclick="appear()">出現</button>
-    <script>
-        function disappear(){
-            document.getElementById("pic").style.display="none";
+   <button onclick="show()">顯示課程</button>
+   <ul id="courstList"></ul>
+   <script>
+    const courses=["HTML","CSS","JavaScript"];
+    function show(){
+        const courseList=document.getElementById("courstList");
+        courseList.textContent="";
+        for (const course of courses){
+            
+            const li=document.createElement("li");
+            li.textContent=course;
+            console.log(li)
+            courseList.appendChild(li);
         }
-        function appear(){
-            document.getElementById("pic").style.display="block";
-        }
-    </script>
+    }
+   </script> 
 </body>
 </html>
