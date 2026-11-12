@@ -1,72 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
 </head>
 <body>
-  <header class="site-header">
-    <h1>My Learning Space</h1>
-    <nav class="top-nav" aria-label="主要導覽">
-      <a href="#home">首頁</a>
-      <a href="#courses">課程</a>
-      <a href="#settings">設定</a>
-    </nav>
-  </header>
-
-  <div class="dashboard" id="home">
-    <aside class="sidebar" aria-label="學習選單">
-      <h2>學習選單</h2>
-      <nav class="side-nav" aria-label="學習功能">
-        <a href="#courses">我的課程</a>
-        <a href="#progress">學習進度</a>
-        <a href="#tasks">待辦事項</a>
-      </nav>
-    </aside>
-
-    <main class="main-content" id="courses">
-      <section class="overview" id="progress">
-        <h2>本週學習概況</h2>
-        <div class="stats">
-          <article class="stat-card">
-            <h3>4</h3>
-            <p>修課數</p>
-          </article>
-          <article class="stat-card">
-            <h3>2</h3>
-            <p>待完成</p>
-          </article>
-          <article class="stat-card">
-            <h3>85%</h3>
-            <p>學習進度</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="tasks-section" id="tasks">
-        <h2>近期學習任務</h2>
-        <div class="task-list">
-          <div class="task">
-            <span>完成 CSS 練習</span>
-            <span class="task-status">待完成</span>
-          </div>
-          <div class="task">
-            <span>觀看 Vue 課前影片</span>
-            <span class="task-status">進行中</span>
-          </div>
-          <div class="task">
-            <span>準備程式設計測驗</span>
-            <span class="task-status">待完成</span>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <footer id="settings">
-    <p>Student Dashboard｜My Learning Space</p>
-  </footer>
+   <button onclick="show()">顯示課程</button>
+   <ul id="courstList"></ul>
+   <script>
+    const courses=["HTML","CSS","JavaScript"];
+    function show(){
+        const courseList=document.getElementById("courstList");
+        courseList.textContent="";
+        for (const course of courses){
+            
+            const li=document.createElement("li");
+            li.textContent=course;
+            console.log(li)
+            courseList.appendChild(li);
+        }
+    }
+   </script> 
 </body>
 </html>
